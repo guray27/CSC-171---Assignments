@@ -89,8 +89,8 @@ function move() {
 
 </head>
 <body style="background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-image: url('../static/image.jpg')">
-	<p style="margin-left:330px; font-family: 'calibri','serif'; font-size:30px; margin-top:90px; color:white;">8-Tile Puzzle Solver</p>
-	<p style="margin-left:160px; font-family: 'calibri','serif'; font-size:20px; margin-top:10px; color:white;">(Press SOLVE to begin then REFRESH to refresh the initial randomized state)</p>
+	<p style="margin-left:330px; font-family: 'calibri','serif'; font-size:30px; margin-top:90px; color:white;">A* 8-Tile Puzzle Solver</p>
+	<p style="margin-left:160px; font-family: 'calibri','serif'; font-size:20px; margin-top:10px; color:white;">(Press SIMULATE to begin then REFRESH to refresh the initial randomized state)</p>
 	<div class="container" id="8tiles" style="padding;">
 		<button id="t0" class="btn btn-default tile blank"> </button>
 		<button id="t1" class="btn btn-default tile">1</button>
@@ -105,8 +105,22 @@ function move() {
 		<button id="t8" class="btn btn-default tile">8</button>
 	</div>
 	<br/>
-	<button id="begin" onclick="start({{ initial | safe }}, {{ moves | safe }})" class="btn btn-default" style="margin-left:320px;">SOLVE</button>
+	<button id="begin" onclick="start({{initial| safe }}, {{ moves | safe }}})" class="btn btn-default" style="margin-left:290px;">SIMULATE</button>
 	<button id="begin" onclick="location.reload()" class="btn btn-default">REFRESH</button>
+	<p style="margin-left:290px; margin-top:20px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">A* Shortest Path: {{ moves }}.</span></p>
+	<p style="margin-left:290px; margin-top:3px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">BFS Shortest Path: {{ moves2 }}.</span></p>
+	<p style="margin-left:290px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">A* Runtime: {{ sec_astar }} seconds</span></p>
+	<p style="margin-left:290px; margin-top:3px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">BFS Runtime: {{ sec_bfs }} seconds</span></p>
+	<p style="margin-left:290px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">A* Number of Explored Nodes: {{ astar }}</span></p>
+	<p style="margin-left:290px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">BFS Number of Explored Nodes: {{ bfs }}</span></p>
+
+
+
+
+</body>
+
+</html>
+
 
 
 
