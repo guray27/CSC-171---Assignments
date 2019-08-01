@@ -1,8 +1,7 @@
 # CSC-171---Assignments
 
-Assignment 1: (requires Python 3)
-
-
+Assignment 1: 
+Prolog
 
 
 Assignment 2: (requires Python 3)
